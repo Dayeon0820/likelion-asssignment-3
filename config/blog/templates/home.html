@@ -1,0 +1,12 @@
+<h1>Blog assignment</h1>
+<a href="{%url 'create'%}">새 글 작성하기</a>
+<div id="main-box">
+    {% for blog in blogs %}
+    <a href="{%url 'detail' blog.id%}">
+        <h2>{{blog.title}}</h2>
+        <p>{{blog.content}}</p>
+        <p>{{blog.created_at}}</p>
+    </a>
+    {% endfor %}
+</div>
+
